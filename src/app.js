@@ -1,13 +1,13 @@
 // Global environment variables
 require('dotenv').config();
 
-// Third-party dependencies
+// DEPENDENCIES
+// External dependencies
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
-
-// Local dependencies
+// Internal dependencies
 const routes = require('./_constants/routes');
 const usersRouter = require('./user/user.router');
 const { CORS_ORIGIN_WHITELIST } = require('./_config');
@@ -41,13 +41,10 @@ app.use((err, req, res, next) => {
   res.json(err);
 })
 
-// Database
+// Database handling
 const db = require("./_db");
 db.mongoose
-  .connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+  .connect(process.env.DATABASE_URL)
   .then(() => {
     console.log("Connected to the database!");
   })

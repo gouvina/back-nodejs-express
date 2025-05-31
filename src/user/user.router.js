@@ -1,10 +1,7 @@
-// Third-party dependencies
+// DEPENDENCIES
+// External dependencies
 const express = require('express');
-
-// Main router object
-const router = express.Router();
-
-// User controller methods
+// Internal dependencies
 const {
   getUsers,
   getUser,
@@ -12,6 +9,11 @@ const {
   updateUser,
   deleteUser,
 } = require('./user.controller');
+
+// ROUTER
+const router = express.Router();
+
+// ENDPOINTS
 
 // GET /users - Gets list of users
 router.get('/', getUsers);

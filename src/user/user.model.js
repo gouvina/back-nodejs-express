@@ -1,6 +1,6 @@
 module.exports = mongoose => {
   const User = mongoose.model(
-    "users",
+    "users", // Collection name
     mongoose.Schema(
       {
         email: {

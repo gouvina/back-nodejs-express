@@ -1,9 +1,9 @@
-// Third-party dependencies
-const { ObjectId } = require('mongodb');
-
-// Local dependencies
+// DEPENDENCIES
+// Internal dependencies
 const db = require("../_db");
 const User = db.User;
+
+// MAIN METHODS
 
 // Get list of users
 exports.getUsers = async () => {
