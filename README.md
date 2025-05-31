@@ -29,5 +29,6 @@ In order to run the project follow the next steps, taking into account they are 
     - DATABASE_URL=mongodb://localhost:27017/nodejs-express - *(This is assuming you created DB with name nodejs-express)*
 4. Run `yarn` to install all dependencies
 5. Run `yarn start` for starting server or `yarn test` for starting server with `nodemon`
+6. (Optional) Import postman collection under `util` folder 
 
 
